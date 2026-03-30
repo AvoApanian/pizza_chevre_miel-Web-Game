@@ -20,6 +20,7 @@ export default function DownloadSection({ t }) {
       dir={t.dir}
       style={{ padding: '80px 24px', position: 'relative', overflow: 'hidden' }}
     >
+      {/* Background blob */}
       <div style={{
         position: 'absolute',
         top: 0, left: '50%',
@@ -33,6 +34,7 @@ export default function DownloadSection({ t }) {
 
       <div style={{ maxWidth: 900, margin: '0 auto', position: 'relative' }}>
 
+        {/* Header */}
         <div style={{ textAlign: 'center', marginBottom: 52 }}>
           <div style={{
             display: 'inline-flex',
@@ -62,6 +64,7 @@ export default function DownloadSection({ t }) {
           </h2>
         </div>
 
+        {/* Download card */}
         <div style={{
           background: 'linear-gradient(145deg, rgba(42,20,0,0.95), rgba(26,8,0,0.95))',
           border: '2px solid rgba(255,179,0,0.35)',
@@ -74,6 +77,7 @@ export default function DownloadSection({ t }) {
           alignItems: 'center',
           gap: 20,
         }}>
+          {/* Android badge */}
           <div style={{ display: 'flex', alignItems: 'center', gap: 12, fontSize: 14, color: 'rgba(255,255,255,0.6)' }}>
             <span style={{ fontSize: 32 }}>🤖</span>
             <span style={{ fontWeight: 700 }}>Android 8.0+</span>
@@ -83,8 +87,9 @@ export default function DownloadSection({ t }) {
             <span style={{ color: '#66BB6A', fontWeight: 700 }}>✓ Gratuit</span>
           </div>
 
+          {/* Download button */}
           <a
-            href="apk/app-release.apk"
+            href={`${import.meta.env.BASE_URL}apk/app-release.apk`}
             download="PizzaChevreEtMiel.apk"
             onClick={handleDownload}
             style={{
@@ -117,6 +122,7 @@ export default function DownloadSection({ t }) {
             <span style={{ fontSize: 12, fontWeight: 600, opacity: 0.85 }}>{t.dlBtnSub}</span>
           </a>
 
+          {/* Warning note */}
           <div style={{
             display: 'flex',
             alignItems: 'center',
@@ -133,6 +139,7 @@ export default function DownloadSection({ t }) {
             {t.dlNote}
           </div>
         </div>
+
       </div>
     </section>
   )
